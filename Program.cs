@@ -60,6 +60,34 @@ namespace Hahaton
                 }
                 Console.WriteLine("End");
             }
+            void PrintBranchUp()
+            {
+                string tmp = excelRange.Cells[5, 3].Text.ToString(); //исправить колонки на заданную
+
+
+                if (tmp != "" && tmp.Length > 6)
+                {
+                    for (int j = 1; j <= rowCount; j++)
+                    {
+
+                        if (excelRange.Cells[j, 2].Text.ToString() == tmp)
+                        {
+                            Console.WriteLine(excelRange.Cells[j, 1].Value2.ToString());
+                            tmp = excelRange.Cells[j, 3].Text.ToString();
+                            j = 1;
+
+                        }
+
+
+                    }
+
+                }
+
+
+
+
+                Console.WriteLine("Я конч");
+            }
 
             //void PrintChildrens()
             //{

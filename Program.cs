@@ -112,7 +112,27 @@ namespace Hahaton
 
                 Console.WriteLine("End");
             }
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!List<string> allbad = new List<string>();
+            string[] elem=new string[colCount];
+            
 
+            for (int j = 1; j <= rowCount; j++)
+            {
+                string b = excelRange.Cells[j, 2].Text.ToString();
+                string tmp = excelRange.Cells[j, 3].Text.ToString();
+
+                if ((tmp == "" && b != "1436259974") || tmp.Length <= 6)
+                {
+                    for (int i = 0; i < colCount; i++)
+                    {
+                        elem[i] = excelRange.Cells[j, i+1].Text.ToString();
+                        Console.WriteLine(elem[i]);
+                    }
+                    allbad.Add(elem.ToString());
+                }
+            }
+            Console.WriteLine(allbad);
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             //void PrintChildrens()
             //{
             //    //Выводит потомков по значению 2 колонки

@@ -1,0 +1,9 @@
+D:\python дз\Hahaton\Hahaton\bin\Debug\Hahaton.exe.config
+D:\python дз\Hahaton\Hahaton\bin\Debug\Hahaton.exe
+D:\python дз\Hahaton\Hahaton\bin\Debug\Hahaton.pdb
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.csproj.AssemblyReference.cache
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.csproj.SuggestedBindingRedirects.cache
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.csproj.ResolveComReference.cache
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.csproj.CoreCompileInputs.cache
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.exe
+D:\python дз\Hahaton\Hahaton\obj\Debug\Hahaton.pdb

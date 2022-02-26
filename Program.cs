@@ -112,27 +112,36 @@ namespace Hahaton
 
                 Console.WriteLine("End");
             }
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!List<string> allbad = new List<string>();
-            string[] elem=new string[colCount];
-            
-
-            for (int j = 1; j <= rowCount; j++)
+            void EXCEPTIONS()
             {
-                string b = excelRange.Cells[j, 2].Text.ToString();
-                string tmp = excelRange.Cells[j, 3].Text.ToString();
+                List<string> allbad = new List<string>();
+                string[] elem = new string[colCount];
 
-                if ((tmp == "" && b != "1436259974") || tmp.Length <= 6)
+
+                for (int j = 1; j <= rowCount; j++)
+                {
+                    string b = excelRange.Cells[j, 2].Value2.ToString();
+                    string tmp = excelRange.Cells[j, 3].Text.ToString();
+
+                    if ((tmp == "" && b != "1436259974") || (tmp.Length > 0 && tmp.Length <= 6))
+                    {
+                        for (int i = 0; i < colCount; i++)
+                        {
+                            elem[i] = excelRange.Cells[j, i + 1].Text.ToString();
+
+                        }
+                        allbad.Add(elem.ToString());
+                    }
+                }
+                foreach (var item in allbad)
                 {
                     for (int i = 0; i < colCount; i++)
                     {
-                        elem[i] = excelRange.Cells[j, i+1].Text.ToString();
-                        Console.WriteLine(elem[i]);
+                        Console.Write(elem[i]);
                     }
-                    allbad.Add(elem.ToString());
+                    Console.WriteLine();
                 }
             }
-            Console.WriteLine(allbad);
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             //void PrintChildrens()
             //{
             //    //Выводит потомков по значению 2 колонки

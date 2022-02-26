@@ -86,7 +86,31 @@ namespace Hahaton
 
 
 
-                Console.WriteLine("Я конч");
+                Console.WriteLine("End");
+            }
+            void Svoistva()
+            {
+                int n = Console.Read(); ;
+                string tmp = excelRange.Cells[n, 2].Text.ToString(); //исправить колонки на заданную
+
+
+                if (tmp != "" && tmp.Length > 6)
+                {
+                    Console.WriteLine("Номер элемента " + excelRange.Cells[n, 1].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 4].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 5].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 6].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 7].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 8].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 9].Value2.ToString());
+                    Console.WriteLine(excelRange.Cells[n, 10].Value2.ToString());
+                }
+                else Console.WriteLine("Битый элемент");
+
+
+
+
+                Console.WriteLine("End");
             }
 
             //void PrintChildrens()
